@@ -3,143 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davi Guimarães</title>
+    <meta name="description" content="Portfólio de Davi Guimarães - Desenvolvedor Front-end">
+    <title>Davi Guimarães | Desenvolvedor Front-end</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
+    <header class="header" data-header>
+        <nav class="nav-container container">
             <div class="logo">
-                <a href="#home">
-                    <img src="src/logo.png" alt="Logo" class="logo-image">
+                <a href="#home" aria-label="Home">
+                    <img src="src/logo.png" alt="" class="logo-image" width="40" height="40">
                 </a>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" data-menu-toggle>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Tecnologias</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+            <ul class="nav-list" data-nav-list>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Tecnologias</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero-section">
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="src/fotodavi.png" alt="Developer Profile">
-                </div>
-                <div class="profile-text">
-                    <h1>Davi Guimarães</h1>
-                    <p class="title">Desenvolvedor Front-end</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section">
-            <h2>Tecnologias</h2>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <img src="src/Typescript.png" alt="TypeScript">
-                    <span>TypeScript</span>
-                </div>
-                <div class="tech-item">
-                    <img src="src/javascript.png" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <img src="src/react.png" alt="React">
-                    <span>React.js</span>
-                </div>
-                <div class="tech-item">
-                    <img src="src/htpng.webp" alt="HTML5">
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <img src="src/CSS3.png" alt="CSS3">
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-item">
-                    <img src="src/nodejs.png" alt="Node.js">
-                    <span>Node.js</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="about-container">
-                <h2>Sobre Mim</h2>
-                <p>
-                    Sou desenvolvedor Front-end com experiência em JavaScript, TypeScript, React.js e Node.js. 
-                    Aprimorando minhas habilidades em desenvolvimento web, focando na criação 
-                    de interfaces eficientes, funcionais e intuitivas para os usuários.
-                    Ao longo da minha trajetória, participei de diversos projetos de inovação, nos quais apliquei 
-                    tecnologias modernas para desenvolver soluções criativas de alto impacto.
-                    Minha experiência inclui desde o design de interfaces responsivas até a implementação 
-                    de funcionalidades complexas, sempre com o objetivo de melhorar a usabilidade e a experiência do usuário.
-                </p>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <h2>Projetos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="src/marafoto.png" alt="Mara">
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-image" data-animate="fade-right">
+                        <img src="src/fotodavi.png" alt="Davi Guimarães" width="200" height="200" loading="eager">
                     </div>
-                    <h3>Mara</h3>
-                    <p>Desenvolvimento de interface para chatbot institucional da Universidade Federal do Maranhão.</p>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="src/Archvault.png" alt="Archvault">
+                    <div class="profile-text" data-animate="fade-left">
+                        <span class="subtitle">Olá, eu sou</span>
+                        <h1 class="title">Davi Guimarães</h1>
+                        <p class="role">Desenvolvedor Front-end</p>
+                        <div class="cta-container">
+                            <a href="#contact" class="cta-button primary">Entre em contato</a>
+                            <a href="#projects" class="cta-button secondary">Ver projetos</a>
+                        </div>
                     </div>
-                    <h3>ArchVault</h3>
-                    <p>Desenvolvimento de plataforma para hospedagem de artigos científicos, facilitando o acesso ao conhecimento.</p>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="src/screengeek.webp" alt="ScreenGeek">
-                    </div>
-                    <h3>ScreenGeek</h3>
-                    <p>Quiz interativo sobre séries, onde os usuários podem testar seus conhecimentos sobre suas séries favoritas.</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2>Contato</h2>
-            <div class="social-links">
-                <a href="https://github.com/davgmr" target="_blank" class="social-item">
-                    <img src="src/github.jpg" alt="GitHub">
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/davi-guimarãesdev/" target="_blank" class="social-item">
-                    <img src="src/linkedin.jpeg" alt="LinkedIn">
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://www.instagram.com/dav.gmr/profilecard/?igsh=Mm81YzJiMjR2Ymdm" class="social-item">
-                    <img src="src/instagram.svg" alt="Email">
-                    <span>Instagram</span>
-                </a>
+        <section id="skills" class="skills-section" data-section>
+            <div class="container">
+                <h2 class="section-title" data-animate="fade-up">Tecnologias</h2>
+                <div class="tech-grid">
+                    <div class="tech-item" data-animate="fade-up" data-delay="0.1">
+                        <img src="src/Typescript.png" alt="" width="48" height="48">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item" data-animate="fade-up" data-delay="0.2">
+                        <img src="src/javascript.png" alt="" width="48" height="48">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item" data-animate="fade-up" data-delay="0.3">
+                        <img src="src/react.png" alt="" width="48" height="48">
+                        <span>React.js</span>
+                    </div>
+                    <div class="tech-item" data-animate="fade-up" data-delay="0.4">
+                        <img src="src/htpng.webp" alt="" width="48" height="48">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item" data-animate="fade-up" data-delay="0.5">
+                        <img src="src/CSS3.png" alt="" width="48" height="48">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item" data-animate="fade-up" data-delay="0.6">
+                        <img src="src/nodejs.png" alt="" width="48" height="48">
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section" data-section>
+            <div class="container">
+                <div class="about-container" data-animate="fade-up">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <div class="about-content">
+                        <p class="about-text">
+                            Sou desenvolvedor Front-end com experiência em JavaScript, TypeScript, React.js e Node.js. 
+                            Aprimorando minhas habilidades em desenvolvimento web, focando na criação 
+                            de interfaces eficientes, funcionais e intuitivas para os usuários.
+                        </p>
+                        <p class="about-text">
+                            Ao longo da minha trajetória, participei de diversos projetos de inovação, nos quais apliquei 
+                            tecnologias modernas para desenvolver soluções criativas de alto impacto.
+                            Minha experiência inclui desde o design de interfaces responsivas até a implementação 
+                            de funcionalidades complexas, sempre com o objetivo de melhorar a usabilidade e a experiência do usuário.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section" data-section>
+            <div class="container">
+                <h2 class="section-title light" data-animate="fade-up">Projetos</h2>
+                <div class="projects-grid">
+                    <article class="project-card" data-animate="fade-up" data-delay="0.1">
+                        <div class="project-image">
+                            <img src="src/marafoto.png" alt="Projeto Mara" width="400" height="300" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Mara</h3>
+                            <p class="project-description">Desenvolvimento de interface para chatbot institucional da Universidade Federal do Maranhão.</p>
+                            <div class="project-links">
+                                <a href="https://portalpadrao.ufma.br/site" class="project-link">Ver projeto</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-animate="fade-up" data-delay="0.2">
+                        <div class="project-image">
+                            <img src="src/Archvault.png" alt="Projeto Archvault" width="400" height="300" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ArchVault</h3>
+                            <p class="project-description">Desenvolvimento de plataforma para hospedagem de artigos científicos, facilitando o acesso ao conhecimento.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Ver projeto</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-animate="fade-up" data-delay="0.3">
+                        <div class="project-image">
+                            <img src="src/screengeek.webp" alt="Projeto ScreenGeek" width="400" height="300" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ScreenGeek</h3>
+                            <p class="project-description">Quiz interativo sobre séries, onde os usuários podem testar seus conhecimentos sobre suas séries favoritas.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Ver projeto</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section" data-section>
+            <div class="container">
+                <h2 class="section-title" data-animate="fade-up">Contato</h2>
+                <div class="social-links">
+                    <a href="https://github.com/davgmr" target="_blank" rel="noopener noreferrer" class="social-item" data-animate="fade-up" data-delay="0.1">
+                        <img src="src/github.jpg" alt="" width="48" height="48">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/davi-guimarãesdev/" target="_blank" rel="noopener noreferrer" class="social-item" data-animate="fade-up" data-delay="0.2">
+                        <img src="src/linkedin.jpeg" alt="" width="48" height="48">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/dav.gmr/profilecard/?igsh=Mm81YzJiMjR2Ymdm" target="_blank" rel="noopener noreferrer" class="social-item" data-animate="fade-up" data-delay="0.3">
+                        <img src="src/instagram.svg" alt="" width="48" height="48">
+                        <span>Instagram</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Davi Guimarães. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2024 Davi Guimarães. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
